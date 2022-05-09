@@ -86,7 +86,11 @@ class Home extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      Image.asset('assets/shopping-cart.png',height: 30, width: 35,)
+                      GestureDetector(
+                          onTap: (){
+                            Navigator.pushNamed(context, 'cart');
+                          },
+                          child: Image.asset('assets/shopping-cart.png',height: 30, width: 35,))
                     ],
                   )
                 ],
@@ -228,8 +232,8 @@ class Home extends StatelessWidget {
                                             ),
                                           ],
                                         ),
-                                        const SizedBox(width: 140,),
-                                        const Icon(Icons.chevron_right),
+                                        const SizedBox(width: 110,),
+                                        const Icon(Icons.chevron_right,size: 35,),
                                         const SizedBox(width: 10),
                                       ],
                                     ),
@@ -285,8 +289,8 @@ class Home extends StatelessWidget {
                                             ),
                                           ],
                                         ),
-                                        const SizedBox(width: 140,),
-                                        const Icon(Icons.chevron_right),
+                                        const SizedBox(width: 120,),
+                                        const Icon(Icons.chevron_right,size: 35,),
                                         const SizedBox(width: 10),
                                       ],
                                     ),
